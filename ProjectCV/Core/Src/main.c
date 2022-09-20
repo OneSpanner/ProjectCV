@@ -84,8 +84,8 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  /* USER CODE BEGIN 2 */
-
+    /* USER CODE BEGIN 2 */
+    uint8_t keyCtrlTouch, keyCTouch, keyVTouch, keyFuncTouch;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -93,7 +93,18 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+      keyCtrlTouch = !HAL_GPIO_ReadPin(KEY_CTRL_GPIO_Port, KEY_CTRL_Pin);
+      keyCTouch = !HAL_GPIO_ReadPin(KEY_C_GPIO_Port, KEY_C_Pin);
+      keyVTouch = !HAL_GPIO_ReadPin(KEY_V_GPIO_Port, KEY_V_Pin);
+      keyFuncTouch = HAL_GPIO_ReadPin(KEY_FUNC_GPIO_Port, KEY_FUNC_Pin);
 
+      if(keyCtrlTouch || keyCTouch || keyVTouch || keyFuncTouch){
+          HAL_Delay(10);
+          HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_SET);
+      } else {
+          HAL_Delay(10);
+          HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_RESET);
+      }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
