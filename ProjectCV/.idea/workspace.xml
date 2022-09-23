@@ -30,6 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2FAxlMfiV3TVUX0MKVWIeXlkuvN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -66,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663948840512</updated>
-      <workItem from="1663948842287" duration="29000" />
+      <workItem from="1663948842287" duration="377000" />
     </task>
     <servers />
   </component>
