@@ -88,29 +88,44 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   MX_USART1_UART_Init();
-  /* USER CODE BEGIN 2 */
+    /* USER CODE BEGIN 2 */
     uint8_t keyCtrlTouch, keyCTouch, keyVTouch, keyFuncTouch;
-    uint8_t led1State;
-  /* USER CODE END 2 */
+    uint8_t led1Off, led2Off;
+    uint8_t buff[8] = {0x00, 0x00, 0x00, 0x00,0x00, 0x00, 0x00, 0x00};
 
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
+    HAL_GPIO_WritePin(LED2_GPIO_Port,LED2_Pin,GPIO_PIN_SET);
+    /* USER CODE END 2 */
 
-    // 获取按键状态
-      keyCtrlTouch = !HAL_GPIO_ReadPin(KEY_CTRL_GPIO_Port, KEY_CTRL_Pin);
-      keyCTouch = !HAL_GPIO_ReadPin(KEY_C_GPIO_Port, KEY_C_Pin);
-      keyVTouch = !HAL_GPIO_ReadPin(KEY_V_GPIO_Port, KEY_V_Pin);
-      keyFuncTouch = HAL_GPIO_ReadPin(KEY_FUNC_GPIO_Port, KEY_FUNC_Pin);
+    /* Infinite loop */
+    /* USER CODE BEGIN WHILE */
+    while (1)
+    {
+        /* USER CODE END WHILE */
+        // 获取按键状态
+        keyCtrlTouch = !HAL_GPIO_ReadPin(KEY_CTRL_GPIO_Port, KEY_CTRL_Pin);
+        keyCTouch = !HAL_GPIO_ReadPin(KEY_C_GPIO_Port, KEY_C_Pin);
+        keyVTouch = !HAL_GPIO_ReadPin(KEY_V_GPIO_Port, KEY_V_Pin);
+        keyFuncTouch = HAL_GPIO_ReadPin(KEY_FUNC_GPIO_Port, KEY_FUNC_Pin);
 
-    // 通过LED1进行按键测试
-      led1State = keyCtrlTouch || keyCTouch || keyVTouch || keyFuncTouch;
-      HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,led1State);
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
+        // 通过LED1进行按键测试
+        led1Off = keyCtrlTouch || keyCTouch || keyVTouch || keyFuncTouch;
+
+        if(led1Off){
+            HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_SET);
+            buff[0] = 0x19;
+            buff[1] = 0xe0;
+            printf("abc");
+        } else {
+            HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_RESET);
+            buff[0] = 0x00;
+            buff[1] = 0x00;
+        }
+//      while(USBD_HID_SendReport(&hUsbDeviceFS, buff, 8));
+//      USBD_HID_SendReport(&hUsbDeviceFS, buff, 8);
+//      HAL_Delay(15);
+        /* USER CODE BEGIN 3 */
+    }
+    /* USER CODE END 3 */
 }
 
 /**

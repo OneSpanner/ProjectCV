@@ -1,0 +1,5 @@
+"E:\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=E:/STMicroelectronics/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gcc.exe -DCMAKE_CXX_COMPILER=E:/STMicroelectronics/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-g++.exe -G "CodeBlocks - MinGW Makefiles" -S E:\CLionProjects\ProjectKeyboard\ProjectCV -B E:\CLionProjects\ProjectKeyboard\ProjectCV\cmake-build-debug
+-- Minimal optimization, debug info included
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/CLionProjects/ProjectKeyboard/ProjectCV/cmake-build-debug
