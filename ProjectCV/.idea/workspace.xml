@@ -17,7 +17,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e031f31-1e98-4134-90a1-0772cf69f957" name="Changes" comment="" />
+    <list default="true" id="a5ab4f88-4e79-473e-a1ea-b9ae7699d489" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,10 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2F5FO8meOVapMKJPUODXpVL6MEN" />
+  <component name="ProjectId" id="2FAkhvJ6OUqPPNcDPaaWUB3jz8H" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -64,12 +61,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8e031f31-1e98-4134-90a1-0772cf69f957" name="Changes" comment="" />
-      <created>1663774006290</created>
+      <changelist id="a5ab4f88-4e79-473e-a1ea-b9ae7699d489" name="Changes" comment="" />
+      <created>1663942399587</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1663774006290</updated>
-      <workItem from="1663774010688" duration="75000" />
+      <updated>1663942399587</updated>
+      <workItem from="1663942401172" duration="47000" />
     </task>
     <servers />
   </component>
